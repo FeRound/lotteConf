@@ -5,11 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>롯데제과</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/initial.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="./js/common.js"></script>
+  
 </head>
 <body>
   <div class="back-to-top">
@@ -39,16 +40,21 @@
       </ul>
     </nav>
   </header>
-  <section id="intro">
-    <article>
-      <h2>About My Company</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Doloremque cupiditate distinctio iure quo similique alias bl
-        anditiis repudiandae molestiae repellat tempora unde nisi ipsum q
-        uaerat consectetur culpa ratione, placeat praesentium facere.</p>
-      <a href="MyProfile" class="button ani-btn">get started</a>
-    </article>
-  </section>
+  <div class="swiper mySwiper" id="intro" >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide1">
+      </div>
+      <div class="swiper-slide slide2">
+      </div>
+      <div class="swiper-slide slide3">
+      </div>
+      <div class="swiper-slide slide4">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
   <main>
     <!-- menu section 노출영역 -->
     <section id="myprofile">
@@ -360,5 +366,6 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js"></script>
 </body>
 </html>

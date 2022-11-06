@@ -242,10 +242,20 @@ section:nth-child(odd){
   background: #f9f9f9;
 }
 
-section#intro{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../img/intro/3.jpg);
+#intro{
+  height: 100vh;
+}
+#intro .slide1{
+  background: url(../img/lotte-mainbanner/img1.jpg) no-repeat 50% 0;
+}
+#intro .slide2{
+  background: url(../img/lotte-mainbanner/img2.jpg) no-repeat 50% 0;
+}
+#intro .slide3{
+  background: url(../img/lotte-mainbanner/img3.jpg) no-repeat 50% 0;
+}
+#intro .slide4{
+  background: url(../img/lotte-mainbanner/img4.jpg) no-repeat 50% 0;
 }
 
 section#myprofile{
