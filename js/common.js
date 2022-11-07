@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $("nav ul li a,.back-to-top a,.footer-top a,a.ani-btn").click(function(e){
     var thisElem = $(this.hash);
+    console.log(thisElem)
     $("html,body").stop()
     $("html,body").animate({
       scrollTop: thisElem.offset().top
@@ -8,15 +9,7 @@ $(document).ready(function(){
     return false
   })
 
-  $(window).scroll(function(){
-    let elem = $(".back-to-top");
-    if(this.scrollY > 0){
-      elem.addClass("on");
-    }else{
-      elem.removeClass("on");
-    }
-    
-  });
+
 
   // section offsettop 값으로 class 추가
   $(window).scroll(function(){
@@ -40,6 +33,14 @@ $(document).ready(function(){
         $(this).removeClass("active");
       }
     })
+
+    let elem = $(".back-to-top");
+    if(this.scrollY > 0){
+      elem.addClass("on");
+    }else{
+      elem.removeClass("on");
+    }
+
   })
 
 });

@@ -449,6 +449,7 @@ section .row .column .inner.none-type{
 
 section .row .column .inner img{
   width: 80%;
+  border-radius: 20px;
 }
 
 section .row .column .inner h3{
