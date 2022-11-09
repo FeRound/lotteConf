@@ -128,69 +128,7 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 }
 
 /* progress bar style */
-.progressbar{
-  display: flex;
-  align-items: flex-end;
-}
-.progressbar .items-wrap{
-  /* overflow: hidden; */
-  color:white;
-  background-color: rgba(255,255,255, .3);
-  width: 100px;
-  display: flex;
-  /* flex-direction: column; */
-}
-.progressbar .items-wrap:nth-child(1){
-  height: 282px;
-}
-.progressbar .items-wrap:nth-child(2){
-  height: 312px;
-}
-.progressbar .items-wrap:nth-child(3){
-  height: 218px;
-}
-.progressbar .items-wrap:nth-child(4){
-  height: 191px;
-}
 
-.progressbar .items-wrap + .items-wrap{
-  margin-left: 15px;
-}
-
-.progressbar .items{
-  overflow: hidden;
-  box-sizing: border-box;
-  /* box-shadow: 2px 0 2px rgba(0,0,0, .5); */
-  /* border-radius: 0 5px 5px 0; */
-  text-shadow: 1px 1px 1px rgba(0,0,0, .5);
-  padding: 0 10px;
-  width: 100%;
-  line-height: 45px;
-  transition-duration: 1s;
-}
-
-.progressbar .items-wrap:nth-of-type(1) .items{
-  background-color: #FFffff;
-  
-}
-.progressbar .items-wrap:nth-of-type(2) .items{
-  background-color: #da291c;
-}
-.progressbar .items-wrap:nth-of-type(3) .items{
-  background-color: #ffffff;
-}
-.progressbar .items-wrap:nth-of-type(4) .items{
-  background-color: #da291c;
-}
-
-.progressbar .items .title{
-  float: left;
-  font-weight: 700;
-}
-
-.progressbar .items .percent{
-  float: right;
-}
 
 #header{
   width: 100%;
@@ -333,15 +271,37 @@ section:nth-child(odd){
   background-color: #ffffff;
 }
 
-#company-overview img{
+#company-intro img{
   width:500px;
   height: 300px;
 }
 
-#company-overview .inner h3{
+#company-intro .inner h3{
   text-align: center;
   font-size: 4rem;
 }
+
+#company-overview .row .column{
+  flex: 25%;
+}
+
+#company-overview .inner img{
+  position: absolute;
+  width: 8%;
+  border-radius: 0;
+  left:50%;
+  top:25%;
+  transform: translate(-50%, -50%);
+}
+#company-overview .inner h4{
+  margin-top: 50px;
+  font-size: 2rem;
+}
+#company-overview .inner p{
+  font-size: 1.6rem;
+}
+
+
 
 #company-map{
   background-image: url(../img/lotte-company-overview/lotte-company-overview.img1.jpg);
@@ -363,35 +323,131 @@ section:nth-child(odd){
 
 #company-map .inner{
   display: flex;
-  justify-content: space-between;
 }
 
+#company-map .inner ul{
+  flex: 50%;
+}
+#company-map .inner .progressbar{
+  flex: 50%;
+}
 #company-map .inner .font{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 100px;
 }
 
 #company-map .inner .font h3{
   font-size: 3rem;
 }
+#company-map .font .box{
+  position: relative;
+}
+#company-map .font1 .box{
+  margin-left: 80px;
+}
+
+#company-map .font2 .box{
+  margin-left: 50px;
+}
+
 #company-map .inner .font1 .box .percent{
   color:#da291c
 }
-
-#company-map .inner .percent strong{
-  font-size: 9rem;
+#company-map .inner .font .box .year{
+  font-size: 2rem;
 }
-
-#ccompany-map .inner .percent span{
+#company-map .inner .font .box .percent span{
   font-size: 3rem;
+  position: absolute;
+  top:34%;
+  left:110%;
 }
-
+#company-map .inner .font .box .percent strong{
+  font-size: 10rem;
+}
+#company-map .inner .font .arrow img{
+  margin-left: 100px;
+  width: 25%;
+}
 #company-map .inner .title{
   position: absolute;
-  top:90%;
+  top:105%;
+  left:25%;
+  font-size: 1.6rem;
+  color:#333333;
 }
-/* section#company-overview::before{
+
+.progressbar{
+  display: flex;
+  align-items: flex-end;
+}
+.progressbar .items-wrap{
+  /* overflow: hidden; */
+  position: relative;
+  color:white;
+  background-color: rgba(255,255,255, .3);
+  width: 100px;
+  display: flex;
+  margin-right: 30px;
+  /* flex-direction: column; */
+}
+.progressbar .items-wrap:nth-child(2){
+  margin-right: 50px;
+}
+.progressbar .items-wrap:nth-child(1){
+  height: 282px;
+}
+.progressbar .items-wrap:nth-child(2){
+  height: 312px;
+}
+.progressbar .items-wrap:nth-child(3){
+  height: 218px;
+}
+.progressbar .items-wrap:nth-child(4){
+  height: 191px;
+}
+
+/* .progressbar .items-wrap + .items-wrap{
+  margin-left: 15px;
+} */
+
+.progressbar .items{
+  overflow: hidden;
+  box-sizing: border-box;
+  /* box-shadow: 2px 0 2px rgba(0,0,0, .5); */
+  /* border-radius: 0 5px 5px 0; */
+  text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+  padding: 0 10px;
+  width: 100%;
+  line-height: 45px;
+  transition-duration: 1s;
+}
+
+.progressbar .items-wrap .items{
+  background-color: #FFffff;
+}
+.progressbar .items-wrap .items.red-color{
+  background-color: #da291c;
+}
+.progressbar .items-wrap .items.red-color .money{
+  color: #ffffff;
+}
+
+.progressbar .items .money{
+  font-size: 1.6rem;
+  color:#333333;
+}
+/* .progressbar .items .title{
+  float: left;
+  font-weight: 700;
+} */
+
+/* .progressbar .items .percent{
+  float: right;
+} */
+/* section#company-intro::before{
   content: "";
   position: absolute;
   left: 0;
@@ -425,6 +481,10 @@ section > article > h2{
 section > article > p{
   font-size: 20px;
   text-shadow: 1px 1px rgba(0,0,0, .5);
+}
+
+#Project .column{
+  cursor: pointer;
 }
 #Project .column .inner p{
   opacity: 0;
@@ -506,6 +566,9 @@ section .row .column{
   flex: 25%;
   transition: 1s;
 }
+section .row .column.border-style{
+  border: 1px solid #e5e5e5;
+}
 section.active .row .column{
   opacity: 1;
   transform: translateX(0px);
@@ -514,7 +577,7 @@ section.active .row .column{
 section .row .column .inner{
   text-align: center;
   margin: 15px;
-  padding: 70px 15px;
+  padding: 70px 7px;
   background: white;
   border: 1px solid #f1f1f1;
   box-sizing: border-box;
@@ -552,10 +615,10 @@ section .row .column .inner h3 span{
   color: #da291c;
 }
 
-section .row .column .inner p{
+/* section .row .column .inner p{
   font-size: 2rem;
   margin-top: 3rem;
-}
+} */
 /* footer */
 #footer{
   background: #000000;
@@ -658,7 +721,7 @@ section .row .column .inner p{
     flex: 50%;
   }
 
-  section#company-overview .row .column .inner img{
+  section#company-intro .row .column .inner img{
     width: 20%
   }
 
