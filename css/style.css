@@ -4,7 +4,6 @@ html,body{height: 100%;font-size: 10px;}
 *{margin:0;padding:0;list-style:none;text-decoration:none;box-sizing: border-box;font-family: 'Noto Sans KR', sans-serif;}
 a{color:#ffffff;}
 
-
 .button{
   display: inline-block;
   font-size: 16px;
@@ -254,6 +253,7 @@ section{
   justify-content: center;
   min-height: 100vh;
   background: white;
+  flex-direction: column;
 }
 
 section:nth-child(odd){
@@ -333,51 +333,61 @@ section:nth-child(odd){
   background-color: #ffffff;
 }
 
-#myprofile img{
+#company-overview img{
   width:500px;
   height: 300px;
 }
-#company-overview{
+
+#company-overview .inner h3{
+  text-align: center;
+  font-size: 4rem;
+}
+
+#company-map{
   background-image: url(../img/lotte-company-overview/lotte-company-overview.img1.jpg);
   background-position: 50% 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment:fixed
 }
 
-#company-overview .row .column .inner .job{
+#company-map .row .column .inner .job{
   color:#999999;
   font-size:2rem;
   margin-top: 30px;
 }
 
-#company-overview .row .column .inner img{
+#company-map .row .column .inner img{
   width: 50%;
 }
 
-#company-overview .inner{
+#company-map .inner{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-#company-overview .inner .font{
+#company-map .inner .font{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#company-overview .inner .font h3{
+#company-map .inner .font h3{
   font-size: 3rem;
 }
+#company-map .inner .font1 .box .percent{
+  color:#da291c
+}
 
-#company-overview .inner .percent strong{
+#company-map .inner .percent strong{
   font-size: 9rem;
 }
 
-#company-overview .inner .percent span{
+#ccompany-map .inner .percent span{
   font-size: 3rem;
 }
 
-#company-overview .inner .title{
+#company-map .inner .title{
   position: absolute;
   top:90%;
 }
@@ -416,6 +426,27 @@ section > article > p{
   font-size: 20px;
   text-shadow: 1px 1px rgba(0,0,0, .5);
 }
+#Project .column .inner p{
+  opacity: 0;
+  margin-top: 0;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color:#da291c;
+  border-radius: 100%;
+  background-color: rgba(255,255,255, 0.8);
+}
+#Project .column .inner:hover p{
+  opacity: 1;
+}
+#Project .column .inner:hover{
+  background: rgba(0,0,0, 0.5);
+}
+
 
 /* section row title style */
 section .row{
@@ -466,7 +497,7 @@ section .row > h2::before{
 section .row > h2::after{
   width: 40px;
   height: 3px;
-  background: #18d26e;
+  background: #da291c;
 }
 
 /* section row column style */
@@ -509,8 +540,10 @@ section .row .column .inner img{
   border-radius: 20px;
 }
 
-section .row .column .inner h3{
-  font-size: 5rem;
+section .row .column h3{
+  margin-left: 15px;
+  text-align: left;
+  font-size: 2.4rem;
   font-weight: 400;
 }
 
@@ -563,7 +596,6 @@ section .row .column .inner p{
   font-weight: 700;
   letter-spacing: 3px;
   padding: 2px 0 2px 10px;
-  border-left: 4px solid #18d26e;
 }
 
 #footer .container .row .column h4{
@@ -589,7 +621,7 @@ section .row .column .inner p{
 }
 #footer .container .row .column h4::after{
   width: 60px;
-  background: #18d26e;
+  background: #da291c;
 }
 
 #footer .container .row .column ul li{
@@ -616,7 +648,7 @@ section .row .column .inner p{
   padding: 6px 0px;
   width: 35%;
   text-align: center;
-  background: #18d26e;
+  background: #da291c;
   cursor: pointer;
 }
 
