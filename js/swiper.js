@@ -10,6 +10,9 @@ var intro = new Swiper("#main-banner", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  // autoplay: {
+  //   delay: 6000
+  // },
 });
 
 var brand= new Swiper("#brand", {

@@ -22,6 +22,7 @@ $(document).ready(function(){
       elem.removeClass("on");
     }
 
+    let text = $("#company-map strong");
     
     $("#company-map strong").animate({
       counter : $(this).text()        

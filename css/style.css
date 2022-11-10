@@ -48,7 +48,6 @@ a{color:#ffffff;}
   width: 100%;
   height: 100%;
 }
-
 section{
   position: relative;
   display: flex;
@@ -324,18 +323,35 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 }
 
 /* 회사 소개 */
-#company-intro img{
-  width:500px;
-  height: 300px;
+#company-intro .main-img{
+  width: 80%;
 }
-
 #company-intro .inner h3{
   text-align: center;
   font-size: 4rem;
+  margin: 35px 0; 
 }
-#company-intro .inner p{
+#company-intro .box{
+  display: flex;
+  justify-content: center;
+}
+#company-intro .box p{
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  flex: 500px;
+  text-align: left;
+  margin-right: 120px;
+}
+#company-intro .logo-img{
+  flex: 30%;
+  position: relative;
+}
+#company-intro .logo-img img{
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* 회사 개요 */
@@ -484,6 +500,9 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 }
 
 /* 브랜드 */
+#brand img{
+  width:50%;
+}
 #brand .column{
   flex : 16.6%
 }
@@ -494,10 +513,17 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 #brand .inner h3{
   text-align: center;
 }
+#brand .swiper-slide img{
+  opacity: .4;
+}
+#brand .swiper-slide.swiper-slide-active img{
+  opacity: 1;
+}
 
 /* 제품 */
 #product .column{
   cursor: pointer;
+  flex: 25%;
 }
 #product .column .inner p{
   opacity: 0;
@@ -519,7 +545,9 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 #product .column .inner:hover{
   background: rgba(0,0,0, 0.5);
 }
-
+#product img{
+  width: 80%;
+}
 /* footer */
 #footer{
   background: #000000;
