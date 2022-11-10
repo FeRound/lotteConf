@@ -1,4 +1,4 @@
-var intro = new Swiper("#intro", {
+var intro = new Swiper("#main-banner", {
   spaceBetween: 30,
   effect: "fade",
   loop:true,
@@ -10,4 +10,15 @@ var intro = new Swiper("#intro", {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
+
+var brand= new Swiper("#brand", {
+  slidesPerView: 4,
+  centeredSlides: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
 });
