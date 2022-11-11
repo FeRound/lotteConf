@@ -319,7 +319,7 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
   width: 15px;
   height:15px;
   margin-left: 20px;
-  background-color: #ffffff;
+  background-color: #da291c;
 }
 
 /* 회사 소개 */

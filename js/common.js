@@ -21,17 +21,28 @@ $(document).ready(function(){
     }else{
       elem.removeClass("on");
     }
-
-    let text = $("#company-map strong");
     
-    $("#company-map strong").animate({
-      counter : $(this).text()        
-    },{
-      duration : 1000,      
-      step : function(now){
-        $(this).text(Math.ceil(now))
-      }
-    })
+    
+    $("#company-map strong").each(function(){ 
+      let $this = $(this)
+      console.log($this)
+          countTo = $this.attr('data-count');
+      $({ countNum: $this.text()}).animate({
+        countNum: countTo 
+      },
+      { 
+        duration: 1000, 
+        easing:'linear',
+        step: function() {
+          $this.text(Math.ceil(this.countNum));
+        },
+        complete: function() { 
+          $this.text(this.countNum);
+        }
+      });  
+    });
+    
+
     
 
 
