@@ -7,13 +7,12 @@ var intro = new Swiper("#main-banner", {
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: "#main-banner .swiper-pagination",
     clickable: true,
   },
   autoplay: {
     delay: 6000
   },
-  
 });
 
 var brand= new Swiper("#brand", {
@@ -22,7 +21,7 @@ var brand= new Swiper("#brand", {
   spaceBetween: 30,
   grabCursor: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: "#brand .swiper-pagination",
     clickable: true
   }
 });
