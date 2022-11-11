@@ -22,11 +22,9 @@ $(document).ready(function(){
       elem.removeClass("on");
     }
     
-    
     $("#company-map strong").each(function(){ 
       let $this = $(this)
-      console.log($this)
-          countTo = $this.attr('data-count');
+      countTo = $this.attr('data-count');
       $({ countNum: $this.text()}).animate({
         countNum: countTo 
       },
@@ -34,7 +32,7 @@ $(document).ready(function(){
         duration: 1000, 
         easing:'linear',
         step: function() {
-          $this.text(Math.ceil(this.countNum));
+          $this.text(Math.floor(this.countNum));
         },
         complete: function() { 
           $this.text(this.countNum);

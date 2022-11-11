@@ -15,13 +15,13 @@ var intro = new Swiper("#main-banner", {
   },
 });
 
-var brand= new Swiper("#brand", {
-  slidesPerView: 4,
+var brand= new Swiper(".brand-swiper", {
+  // slidesPerView: 4,
   centeredSlides: true,
   spaceBetween: 30,
   grabCursor: true,
   pagination: {
-    el: "#brand .swiper-pagination",
+    el: "brand-swiper .swiper-pagination",
     clickable: true
   }
 });
