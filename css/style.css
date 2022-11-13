@@ -421,6 +421,9 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 #company-map .font2 .box{
   margin-left: 50px;
 }
+#company-map .inner .font .box .percent{
+  position: relative;
+}
 #company-map .inner .font1 .box .percent{
   color:#da291c
 }
@@ -435,6 +438,13 @@ input[type=checkbox]#gnbcheck:checked ~ #gnbbtn > span:nth-child(3){
 }
 #company-map .inner .font .box .percent strong{
   font-size: 10rem;
+  letter-spacing: 3rem;
+}
+#company-map .inner .font .box .percent .point{
+  font-size: 7rem;
+  position: absolute;
+  top: 25%;
+  left: 38%;
 }
 #company-map .inner .font .arrow img{
   margin-left: 100px;
