@@ -22,7 +22,7 @@ $(document).ready(function(){
       elem.removeClass("on");
     }
     
-    $("#company-map strong").each(function(){ 
+    $("#company-map strong").each(function(){ //넘버 애니메이션
       let $this = $(this)
       countTo = $this.attr('data-count');
       $({ countNum: $this.text()}).animate({

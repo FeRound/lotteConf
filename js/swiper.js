@@ -16,12 +16,6 @@ var intro = new Swiper("#main-banner", {
 });
 
 var brand= new Swiper(".brand-swiper", {
-  // slidesPerView: 4,
-  centeredSlides: true,
+  slidesPerView: 2,
   spaceBetween: 30,
-  grabCursor: true,
-  pagination: {
-    el: "brand-swiper .swiper-pagination",
-    clickable: true
-  }
 });
