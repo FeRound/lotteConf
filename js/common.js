@@ -22,23 +22,25 @@ $(document).ready(function(){
       elem.removeClass("on");
     }
     
-    $("#company-map strong").each(function(){ //넘버 애니메이션
-      let $this = $(this)
-      countTo = $this.attr('data-count');
-      $({ countNum: $this.text()}).animate({
-        countNum: countTo 
-      },
-      { 
-        duration: 1000, 
-        easing:'linear',
-        step: function() {
-          $this.text(Math.floor(this.countNum));
+    if($("#company-map").hasClass("active") === true){
+      $("#company-map strong").each(function(){ //넘버 애니메이션
+        let $this = $(this)
+        countTo = $this.attr('data-count');
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo 
         },
-        complete: function() { 
-          $this.text(this.countNum);
-        }
-      });  
-    });
+        { 
+          duration: 2500, 
+          easing:'easeOutCubic',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() { 
+            $this.text(this.countNum);
+          }
+        });  
+      });
+    }
     
 
     
